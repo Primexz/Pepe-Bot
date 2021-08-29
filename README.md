@@ -9,11 +9,11 @@ First as a privately hosted bot, Pepe is now open source on Github, and can be i
 
 ## Features
 - Web Dashboard
+
 - Web Transcripts
 - Fully graphically configurabl
 - Advanced Verification System
 - uses all new Features from the Discord API
-~~Dein Text hier~~
 - Security Features
 - Ticket System
 - Moderation
@@ -59,7 +59,11 @@ npm i
 node .
 ```
 
+## Packages used
+- Dashboard based on: [Discord-Dashboard](https://github.com/breftejk/Discord.js-Web-Dashboard) (modified)
+- Music Commands based on [Distube](https://github.com/skick1234/DisTube) (modified)
+
 ## Pictures
 ![1](https://i.imgur.com/XhYZCI0.png)
-![1](https://i.imgur.com/ZeIkn3j.png)
+![2](https://i.imgur.com/ZeIkn3j.png)
 
