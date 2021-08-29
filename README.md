@@ -59,11 +59,9 @@ git clone https://github.com/Primexz/Pepe-Bot.git
 
 **3. Change Bot Token (botconfig.json)**
 ```json
-...
 {
 	"token": "yourbottoken"
 }
-...
 ```
 
 **4. Setup your Webserver (check [Examples](https://github.com/Primexz/Pepe-Bot/tree/main/Examples))**
