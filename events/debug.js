@@ -12,7 +12,7 @@ if(info.includes("Provided token"))
     return;
 
 fetch(
-    'https://discord.com/api/webhooks/877633271939346502/bh1-RE3Q90GTX8C5C3x8Cs422WWM_mhOmuBTA0PV0ePAQbnb2zXDakZrSH5LA8NuPf3F',
+    'yourhook',
     {
       method: 'post',
       headers: {
