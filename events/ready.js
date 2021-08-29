@@ -4,9 +4,6 @@ const variables = Utils.variables;
 let axios = require("axios")
 
 
-const headers = {
-    'Authorization': `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoxLCJpZCI6Ijg3MDA1NTE2MTEyMzQ1MDg5MSIsImlhdCI6MTYyODYyNDIyOH0.u22EFiNweKMebjBbWHgQ6CyQzLKFm3dajOLhst2GZzI`
-}
 
 module.exports = async (client) => {
 
@@ -29,14 +26,6 @@ module.exports = async (client) => {
 
 
 
-    //Discord Bot List Updater
-    setInterval(async function () {
-        await axios.post(`https://discordbotlist.com/api/v1/bots/870055161123450891/stats`, {
-            "guilds": client.guilds.cache.size,
-            "voice_connections": client.voice.adapters.size
-        }, { headers })
-        console.log("[POST] Updated DiscordBotList.com Statistics")
-    }, 600000);
 
 
 
