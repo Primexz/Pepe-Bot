@@ -1,0 +1,36 @@
+server {
+
+
+
+listen 443;
+
+ssl    on;
+ssl_certificate    yourcert;
+ssl_certificate_key   yourkey;
+
+
+
+        root /var/www/transcripts;
+
+        index index.php index.html index.htm index.nginx-debian.html;
+
+        server_name yourdomainorsubdomain;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+
+
+
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+        }
+
+
+client_max_body_size 32m;
+
+
+
+}
+
