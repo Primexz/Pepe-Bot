@@ -8,7 +8,7 @@ module.exports = async (client, guild) => {
 
 
     fetch(
-        'https://discord.com/api/webhooks/874606349797965864/RrFkm4SXAwq7PZ7_nalMOl1H_L0PCdc1MUaU2RbtQ9zst-yBKcqIZewQQTLUnjsIVMHu',
+        'yourhook',
         {
           method: 'post',
           headers: {
