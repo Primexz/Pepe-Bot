@@ -1,10 +1,10 @@
+# Pepe - The Discord Bot
 
 ## About the project
 The project / The bot Pepe was first published under the name Monolog.
 Due to problems and a very poorly optimized bot, I decided to completely rewrite the project and create the bot **Pepe**. 
 First as a privately hosted bot, Pepe is now open source on Github, and can be installed and used by anyone. 
 
-<br>
 <br>
 
 ## Features
@@ -13,10 +13,7 @@ First as a privately hosted bot, Pepe is now open source on Github, and can be i
 - Fully graphically configurabl
 - Advanced Verification System
 - uses all new Features from the Discord API
-
-
-<br>
-
+~~Dein Text hier~~
 - Security Features
 - Ticket System
 - Moderation
