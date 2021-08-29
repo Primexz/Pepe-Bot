@@ -34,6 +34,7 @@ First as a privately hosted bot, Pepe is now open source on Github, and can be i
 - Node.js 16 or higher
 - NPM
 - Linux :=)
+- Basic knowledge about server administration and javascript
 
 
 
