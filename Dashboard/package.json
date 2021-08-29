@@ -1,0 +1,73 @@
+{
+  "_from": "discord-dashboard",
+  "_id": "discord-dashboard@1.2.3",
+  "_inBundle": false,
+  "_integrity": "sha512-e4Xjmg8gycy/On9jzFnvlF0B97fRuq95B0uvFJXca01UhDMMYV1p4Yqzw4KivP2HaRbitkM7j1GSpwMIhVnyDw==",
+  "_location": "/discord-dashboard",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "discord-dashboard",
+    "name": "discord-dashboard",
+    "escapedName": "discord-dashboard",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/discord-dashboard/-/discord-dashboard-1.2.3.tgz",
+  "_shasum": "02a21158b0418e7e3d62c739487b0822859840fc",
+  "_spec": "discord-dashboard",
+  "_where": "C:\\Users\\xX-Prime-Xx\\Desktop\\PepeBot",
+  "author": {
+    "name": "breftejk"
+  },
+  "bugs": {
+    "url": "https://github.com/breftejk/Discord.js-Web-Dashboard/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "colors": "*",
+    "discord.js": "*",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-partials": "^0.3.0",
+    "express-session": "^1.17.2",
+    "form-data": "^4.0.0",
+    "https": "^1.0.0",
+    "node-fetch": "*",
+    "session-file-store": "^1.5.0"
+  },
+  "deprecated": false,
+  "description": "The best way to create a Web Dashboard for your Discord Bot! No need to edit files or write the server from scratch!",
+  "devDependencies": {},
+  "directories": {
+    "test": "test"
+  },
+  "homepage": "https://assistants.ga/dbd-docs/",
+  "keywords": [
+    "discord",
+    "discord.js",
+    "discordjs",
+    "discord dashboard",
+    "discord web dashboard",
+    "web dashboard",
+    "dashboard"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "discord-dashboard",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breftejk/Discord.js-Web-Dashboard.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.2.3"
+}
