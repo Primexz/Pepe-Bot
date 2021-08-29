@@ -32,6 +32,7 @@ First as a privately hosted bot, Pepe is now open source on Github, and can be i
 - Webserver (Transcripts)
 - Discord Bot Token
 - Node.js 16 or higher
+- NPM
 
 
 
@@ -44,17 +45,48 @@ git clone https://github.com/Primexz/Pepe-Bot.git
 ```
 
 **2. Setup Database (index.js)**
+```js
+...
+  const mariadb = require('mariadb');
+  const pool = mariadb.createPool({
+    host: 'localhost',
+    user: 'youruser',
+    password: 'yourdbpass',
+    connectionLimit: 5
+  });
+...
+```
 
-**3. Change Bot Token (botconfig.js)**
+**3. Change Bot Token (botconfig.json)**
+```json
+...
+{
+	"token": "yourbottoken"
+}
+...
+```
 
+**4. Setup your Webserver (check [Examples](https://github.com/Primexz/Pepe-Bot/tree/main/Examples))**
 
-**4. Install all packages**
+**5. Change Path for Transcripts: [File](https://github.com/Primexz/Pepe-Bot/blob/main/modules/transcript.js)**
+```js
+...
+    fs.writeFile(`yourwebpath/${id}.html`, html, err => {
+      if (err) {
+        console.error(err)
+        return
+      }
+    })
+...
+```
+
+**6. Install all required packages**
 
 ```bash
 npm i
 ```
 
-**5. Start Pepe**
+**7. Start Pepe**
 ```bash
 node .
 ```
@@ -66,4 +98,4 @@ node .
 ## Pictures
 ![1](https://i.imgur.com/XhYZCI0.png)
 ![2](https://i.imgur.com/ZeIkn3j.png)
-
+![3](https://i.imgur.com/qYlsMBQ.png)
