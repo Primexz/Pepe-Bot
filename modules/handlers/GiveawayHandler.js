@@ -149,4 +149,3 @@ module.exports = async function (client) {
     })
     return module.exports;
 }
-// 268921   8501   2264617    63250   1621556358   98b92d11c290961ffb72ae1af511cf55a8b1cfda   2264617
