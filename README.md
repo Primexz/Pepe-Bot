@@ -9,7 +9,6 @@ First as a privately hosted bot, Pepe is now open source on Github, and can be i
 
 ## Features
 - Web Dashboard
-
 - Web Transcripts
 - Fully graphically configurabl
 - Advanced Verification System
