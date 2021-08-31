@@ -1,3 +1,4 @@
 {
-	"token": "yourbottoken"
+	"token": "yourbottoken",
+	"bot_owner_id": "your_discord_id"
 }
