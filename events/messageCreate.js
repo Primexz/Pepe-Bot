@@ -2,6 +2,7 @@ const Utils = require('../modules/utils.js');
 const EventHandler = require('../modules/handlers/EventHandler.js');
 const Discord = require('discord.js');
 const fs = require('fs');
+const { bot_owner_id } = require('../botconfig.json');
 
 const cooldowns = {
   xp: {
@@ -132,7 +133,7 @@ module.exports = async (client, message) => {
 
 
     //Slash Command Generation
-    if (message.content.toLowerCase() === '!deploy' && message.author.id == 780821709263077398) {
+    if (message.content.toLowerCase() === '!deploy' && message.author.id == bot_owner_id) {
 
       try
       {
@@ -159,7 +160,7 @@ module.exports = async (client, message) => {
 
       message.reply({ content: `Successfully reloaded ${Utils.SlashCommandData.length} slash command data!` })
     }
-    else if (message.content.toLowerCase() === '!reload' && message.author.id == 780821709263077398) {
+    else if (message.content.toLowerCase() === '!reload' && message.author.id == bot_owner_id) {
       try {
         let count = 0
         let count2 = 0
