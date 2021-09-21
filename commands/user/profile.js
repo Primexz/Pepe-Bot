@@ -78,7 +78,7 @@ module.exports = {
         emb.setFooter("Pepe Discord Bot", client.user.displayAvatarURL({ dynamic: true }))
         emb.setTimestamp(new Date())
         emb.addFields(
-            {name: ":arrow_right: Level", value: `${levelXp}`, inline: true},
+            {name: ":arrow_right: Level", value: `${level}`, inline: true},
 			{name: ":sparkles: XP", value: `${xp}`, inline: true},
 			{name: ":sparkles: XP to next level", value: `${levelXp - xp}`, inline: true},
 			{name: ":incoming_envelope: Messages Sent", value: `${dbstats ? dbstats.totalmsgs : 0}`, inline: true},
