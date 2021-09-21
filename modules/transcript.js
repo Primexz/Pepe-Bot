@@ -214,7 +214,7 @@ module.exports = async (channelID, CloseReason, ticket = true,) => {
     
     var id = require("crypto").randomBytes(32).toString('hex');
 
-    fs.writeFile(`/var/www/transcripts/${id}.html`, html, err => {
+    fs.writeFile(`/var/www/html/${id}.html`, html, err => {
       if (err) {
         console.error(err)
         return
