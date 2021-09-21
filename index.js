@@ -606,6 +606,11 @@ installModules().then(async () => {
   client.on('interactionCreate', async interaction => {
     if (!interaction.isContextMenu()) return;
 
+            //BotInfoStat Check
+        const databaseinfo = (await client.dbconnection.query("SELECT * FROM botinfostats", []))[0]
+        if (!databaseinfo) {
+          await client.dbconnection.query("INSERT INTO botinfostats (slashcmds, btnclicks , dashlogins) VALUES (?, ?, ?)", [0, 0, 0])
+        }
 
     client.dbconnection.query("UPDATE botinfostats SET slashcmds = slashcmds + 1")
 
@@ -654,7 +659,11 @@ installModules().then(async () => {
   client.on('interactionCreate', async interaction => {
     if (!interaction.isButton()) return;
 
-
+        //BotInfoStat Check
+        const databaseinfo = (await client.dbconnection.query("SELECT * FROM botinfostats", []))[0]
+        if (!databaseinfo) {
+          await client.dbconnection.query("INSERT INTO botinfostats (slashcmds, btnclicks , dashlogins) VALUES (?, ?, ?)", [0, 0, 0])
+        }
 
     client.dbconnection.query("UPDATE botinfostats SET btnclicks = btnclicks + 1")
 
@@ -798,7 +807,11 @@ installModules().then(async () => {
   client.on('interactionCreate', async interaction => {
 
     if (!interaction.isCommand()) return;
-
+        //BotInfoStat Check
+        const databaseinfo = (await client.dbconnection.query("SELECT * FROM botinfostats", []))[0]
+        if (!databaseinfo) {
+          await client.dbconnection.query("INSERT INTO botinfostats (slashcmds, btnclicks , dashlogins) VALUES (?, ?, ?)", [0, 0, 0])
+        }
 
     client.dbconnection.query("UPDATE botinfostats SET slashcmds = slashcmds + 1")
 
