@@ -161,7 +161,7 @@ module.exports = {
 
     {
       name: 'say',
-      description: 'Say an custom embed message',
+      description: 'Say an custom embed message (https://robyul.chat/embed-creator)',
       options: [{
         name: 'msg',
         type: 'STRING',
