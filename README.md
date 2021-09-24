@@ -58,11 +58,14 @@ git clone https://github.com/Primexz/Pepe-Bot.git
 ...
 ```
 
-**3. Change Bot Token (botconfig.json)**
+**3. Change Settings (botconfig.json)**
 ```json
 {
 	"token": "yourbottoken",
-	"bot_owner_id": "your_discord_id"
+	"bot_owner_id": "your_discord_id",
+	"dev_mode": true,
+	"dev_guild": "884766193083351060"
+
 }
 ```
 
@@ -90,6 +93,12 @@ npm i
 ```bash
 node .
 ```
+
+**8. Deploy All Commands**
+```
+Write on Discord: !deploy
+```
+
 
 ## Packages used
 - Dashboard based on: [Discord-Dashboard](https://github.com/breftejk/Discord.js-Web-Dashboard) (modified)
