@@ -1,5 +1,6 @@
 const Utils = require("../../modules/utils.js");
 const Discord = require('discord.js');
+const { bot_owner_id } = require('../../botconfig.json');
 
 const Permissions = Discord.Permissions.FLAGS
 
