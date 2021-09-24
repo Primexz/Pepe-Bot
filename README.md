@@ -64,8 +64,7 @@ git clone https://github.com/Primexz/Pepe-Bot.git
 	"token": "yourbottoken",
 	"bot_owner_id": "your_discord_id",
 	"dev_mode": true,
-	"dev_guild": "884766193083351060"
-
+	"dev_guild": "1234"
 }
 ```
 
