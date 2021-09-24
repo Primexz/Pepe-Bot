@@ -230,11 +230,11 @@ installModules().then(async () => {
   const Dashboard = new DBD.Dashboard({
     port: 6547,
     client: {
-      id: '889865970640891916',
-      secret: 'QDgXqShg2V6YUx96o_oQETOqOq43Z-w7'
+      id: 'yourbotid',
+      secret: 'yourbotsecret'
     },
-    redirectUri: 'http://10.104.0.160:6547/discord/callback',
-    domain: 'http://10.104.0.160:6547/',
+    redirectUri: 'http://yourip:6547/discord/callback',
+    domain: 'http://yourip:6547/',
     bot: client,
     settings: [
       {
