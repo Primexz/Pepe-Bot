@@ -45,7 +45,6 @@ First as a privately hosted bot, Pepe is now open source on Github, and can be i
 git clone https://github.com/Primexz/Pepe-Bot.git
 ```
 
-```
 
 **2. Change Settings (botconfig.json)**
 
