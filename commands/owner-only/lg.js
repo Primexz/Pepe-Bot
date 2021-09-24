@@ -13,7 +13,7 @@ module.exports = {
 	async execute(client, interaction) {
 
 
-        if(interaction.member.id != 780821709263077398)
+        if(interaction.member.id != bot_owner_id)
             return interaction.reply({content: "Only the owner of the bot can execute this", ephemeral: true})
 
         let gid = user =interaction.options.get('gid').value
