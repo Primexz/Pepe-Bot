@@ -1,4 +1,7 @@
 {
 	"token": "yourbottoken",
-	"bot_owner_id": "your_discord_id"
+	"bot_owner_id": "your_discord_id",
+	"dev_mode": false,
+	"dev_guild": "1234"
+
 }
