@@ -48,6 +48,7 @@ git clone https://github.com/Primexz/Pepe-Bot.git
 ```
 
 **2. Change Settings (botconfig.json)**
+
 ```json
 {
 	"token": "yourbottoken",
