@@ -2,6 +2,6 @@
 	"token": "yourbottoken",
 	"bot_owner_id": "your_discord_id",
 	"dev_mode": false,
-	"dev_guild": "1234"
-
+	"dev_guild": "1234",
+	"dblogin": ["localhost", "dbuser", "dbpass"]
 }
