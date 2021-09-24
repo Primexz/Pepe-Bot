@@ -132,24 +132,25 @@ module.exports = async (client, message) => {
 
 
 
-    //Slash Command Generation
+    //Slash Command Generation + Add to DC API
     if (message.content.toLowerCase() === '!deploy' && message.author.id == bot_owner_id) {
 
       try
       {
 
-      // const commands = await client.application?.commands.set(data);
-      // console.log(commands);
+
+      const { dev_mode, dev_guild } = require('../botconfig.json');
 
 
+      let command;
 
-      const command = await client.application?.commands.set(Utils.SlashCommandData);
-      // const command = await client.guilds.cache.get('790700022625992704')?.commands.set(Utils.SlashCommandData);
-
-
+      if(dev_mode)
+        command = await client.guilds.cache.get(dev_guild)?.commands.set(Utils.SlashCommandData);
+      else
+        command = await client.application?.commands.set(Utils.SlashCommandData);    
       
-
-      // await client.application?.commands.set(Utils.ContextCommandData)
+      
+    
 
       }
       catch (error)
