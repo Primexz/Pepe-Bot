@@ -68,7 +68,7 @@ installModules().then(async () => {
   const fs = require('fs');
   const Discord = require('discord.js');
   const DisTube = require('distube')
-  const { prefix, token } = require('./botconfig.json');
+  const { prefix, token, dblogin } = require('./botconfig.json');
   const chalk = require("chalk");
   const client = new Discord.Client({
     shards: 'auto', partials: ['CHANNEL'], intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES, Discord.Intents.FLAGS.GUILD_MEMBERS, Discord.Intents.FLAGS.DIRECT_MESSAGE_REACTIONS, Discord.Intents.FLAGS.DIRECT_MESSAGES, Discord.Intents.FLAGS.GUILD_VOICE_STATES, Discord.Intents.FLAGS.GUILD_INVITES, Discord.Intents.FLAGS.DIRECT_MESSAGE_TYPING]
@@ -177,15 +177,11 @@ installModules().then(async () => {
 
 
 
-
-
-
-
   const mariadb = require('mariadb');
   const pool = mariadb.createPool({
-    host: 'localhost',
-    user: 'youruser',
-    password: 'yourdbpass',
+    host: dblogin[0],
+    user: dblogin[1],
+    password: dblogin[2],
     connectionLimit: 5
   });
 
@@ -234,11 +230,11 @@ installModules().then(async () => {
   const Dashboard = new DBD.Dashboard({
     port: 6547,
     client: {
-      id: 'yourbotid',
-      secret: 'yourbotsec'
+      id: '889865970640891916',
+      secret: 'QDgXqShg2V6YUx96o_oQETOqOq43Z-w7'
     },
-    redirectUri: 'https://dash.pepebot.info/discord/callback',
-    domain: 'https://dash.pepebot.info/',
+    redirectUri: 'http://10.104.0.160:6547/discord/callback',
+    domain: 'http://10.104.0.160:6547/',
     bot: client,
     settings: [
       {
@@ -606,7 +602,8 @@ installModules().then(async () => {
   client.on('interactionCreate', async interaction => {
     if (!interaction.isContextMenu()) return;
 
-            //BotInfoStat Check
+
+        //BotInfoStat Check
         const databaseinfo = (await client.dbconnection.query("SELECT * FROM botinfostats", []))[0]
         if (!databaseinfo) {
           await client.dbconnection.query("INSERT INTO botinfostats (slashcmds, btnclicks , dashlogins) VALUES (?, ?, ?)", [0, 0, 0])
@@ -659,11 +656,12 @@ installModules().then(async () => {
   client.on('interactionCreate', async interaction => {
     if (!interaction.isButton()) return;
 
-        //BotInfoStat Check
-        const databaseinfo = (await client.dbconnection.query("SELECT * FROM botinfostats", []))[0]
-        if (!databaseinfo) {
-          await client.dbconnection.query("INSERT INTO botinfostats (slashcmds, btnclicks , dashlogins) VALUES (?, ?, ?)", [0, 0, 0])
-        }
+
+    //BotInfoStat Check
+    const databaseinfo = (await client.dbconnection.query("SELECT * FROM botinfostats", []))[0]
+    if (!databaseinfo) {
+      await client.dbconnection.query("INSERT INTO botinfostats (slashcmds, btnclicks , dashlogins) VALUES (?, ?, ?)", [0, 0, 0])
+    }
 
     client.dbconnection.query("UPDATE botinfostats SET btnclicks = btnclicks + 1")
 
@@ -807,6 +805,8 @@ installModules().then(async () => {
   client.on('interactionCreate', async interaction => {
 
     if (!interaction.isCommand()) return;
+
+
         //BotInfoStat Check
         const databaseinfo = (await client.dbconnection.query("SELECT * FROM botinfostats", []))[0]
         if (!databaseinfo) {
