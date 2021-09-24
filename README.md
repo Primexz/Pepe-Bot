@@ -45,32 +45,22 @@ First as a privately hosted bot, Pepe is now open source on Github, and can be i
 git clone https://github.com/Primexz/Pepe-Bot.git
 ```
 
-**2. Setup Database (index.js)**
-```js
-...
-  const mariadb = require('mariadb');
-  const pool = mariadb.createPool({
-    host: 'localhost',
-    user: 'youruser',
-    password: 'yourdbpass',
-    connectionLimit: 5
-  });
-...
 ```
 
-**3. Change Settings (botconfig.json)**
+**2. Change Settings (botconfig.json)**
 ```json
 {
 	"token": "yourbottoken",
 	"bot_owner_id": "your_discord_id",
 	"dev_mode": true,
-	"dev_guild": "1234"
+	"dev_guild": "1234",
+	"dblogin": ["localhost", "dbuser", "dbpass"]
 }
 ```
 
-**4. Setup your Webserver (check [Examples](https://github.com/Primexz/Pepe-Bot/tree/main/Examples))**
+**3. Setup your Webserver (check [Examples](https://github.com/Primexz/Pepe-Bot/tree/main/Examples))**
 
-**5. Change Path for Transcripts: [File](https://github.com/Primexz/Pepe-Bot/blob/main/modules/transcript.js)**
+**4. Change Path for Transcripts: [File](https://github.com/Primexz/Pepe-Bot/blob/main/modules/transcript.js)**
 ```js
 ...
     fs.writeFile(`yourwebpath/${id}.html`, html, err => {
@@ -82,18 +72,18 @@ git clone https://github.com/Primexz/Pepe-Bot.git
 ...
 ```
 
-**6. Install all required packages**
+**5. Install all required packages**
 
 ```bash
 npm i
 ```
 
-**7. Start Pepe**
+**6. Start Pepe**
 ```bash
 node .
 ```
 
-**8. Deploy All Commands**
+**7. Deploy All Commands**
 ```
 Write on Discord: !deploy
 ```
